@@ -16,12 +16,10 @@ export default function Header() {
             alt="Logo"
             width={1000}
             height={1000}
-            className="h-24 w-24"
+            className="h-24  w-40"
           />
         </div>
-        <button className="bg-[#00FF9D] text-black px-4 py-2 rounded-lg">
-          Book a Call
-        </button>
+       
       </div>
     </header>
   );

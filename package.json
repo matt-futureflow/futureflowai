@@ -11,6 +11,7 @@
   "dependencies": {
     "class-variance-authority": "^0.7.1",
     "clsx": "^2.1.1",
+    "lenis": "^1.1.20",
     "lucide-react": "^0.475.0",
     "next": "15.1.7",
     "next-video": "^2.0.4",

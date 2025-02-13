@@ -7,13 +7,13 @@ import { cn } from "@/lib/utils";
 export default function HeroSection() {
   
   return (
-    <div className="relative  min-h-screen bg-gradient-to-br from-[#003B20] to-black overflow-hidden">
+    <div className="relative  min-h-screen bg-gradient-to-r from-[#003B20] to-black overflow-hidden">
       <DotPattern
         className={cn(
-          " opacity-55 [mask-image:radial-gradient(800px_circle_at_center,white,transparent)]",
+          " opacity-40 [mask-image:radial-gradient(800px_circle_at_center,white,transparent)]",
         )}
       />
-      <div className="max-w-7xl mx-auto px-4 pt-24 ">
+      <div className="max-w-7xl mx-auto px-4 pt-24 mb-10 ">
         <h1 className="text-4xl lg:text-5xl text-center text-white font-light">
           For SMBs and Agencies...
         </h1>
