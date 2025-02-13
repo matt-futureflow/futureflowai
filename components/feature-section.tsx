@@ -31,8 +31,9 @@ export function FeaturesSection() {
   ];
 
   return (
-    <div className="bg-gradient-to-b from-green-900 to-[#051f14]">
-        <h2 className="text-3xl sm:text-5xl text-white text-center py-3 md:py-10">How Does This Work</h2>
+    <div className=" ">
+        <h2 className="text-3xl sm:text-5xl text-white font-semibold leading-tight
+        text-center py-10 md:py-20">How Does This <span className="text-[#00FF9D]">Work</span></h2>
         <div className="grid  md:grid-cols-2 lg:grid-cols-4 relative z-10 pb-10 max-w-7xl mx-auto">
       {features.map((feature, index) => (
         <Feature key={feature.title} {...feature} index={index} />
@@ -72,7 +73,7 @@ const Feature = ({
       </div>
       <div className="text-lg font-bold mb-2 relative z-10 px-10">
         <div className="absolute left-0 inset-y-0 h-6 group-hover/feature:h-8 w-1 rounded-tr-full rounded-br-full bg-neutral-300 dark:bg-neutral-700 group-hover/feature:bg-emerald-500 transition-all duration-200 origin-center" />
-        <span className="group-hover/feature:translate-x-2 transition duration-200 text-3xl inline-block text-neutral-100">
+        <span className="group-hover/feature:translate-x-2 transition duration-200 text-2xl sm:text-3xl inline-block text-neutral-100">
           {title}
         </span>
       </div>
