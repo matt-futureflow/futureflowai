@@ -30,7 +30,7 @@ export default function HeroSection() {
                   <ChevronRight className="w-4 h-4" />
                 </span>
                 <p className="text-white text-base lg:text-lg">
-                  Capture & Qualify EVERY Lead - <span className="text-[#00FF9D]">24/7</span>
+                  Capture & Qualify Every Lead - <span className="text-[#00FF9D]">24/7</span>
                 </p>
               </div>
               <div className="flex items-start space-x-3">
@@ -38,7 +38,7 @@ export default function HeroSection() {
                   <ChevronRight className="w-4 h-4" />
                 </span>
                 <p className="text-white text-base lg:text-lg">
-                  <span className="text-[#00FF9D]">DOUBLE</span> Conversions With{" "}
+                  <span className="text-[#00FF9D]">Double</span> Conversions With{" "}
                   <span className="text-[#00FF9D]">Instant</span> Follow Ups &{" "}
                   <span className="text-[#00FF9D]">Consistent</span> Lead Nurturing
                 </p>
