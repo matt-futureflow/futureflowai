@@ -9,7 +9,7 @@ import { Play, Pause } from "lucide-react";
 
 export default function AiAssistant() {
   return (
-    <div className="w-full relative px-4 py-16">
+    <div className="w-full relative bg-gradient-to-r from-[#003B20] to-black  px-4 py-16">
       <DotPattern
         className={cn(
           "absolute -top-24 opacity-40 [mask-image:radial-gradient(200px_circle_at_center,white,transparent)]"

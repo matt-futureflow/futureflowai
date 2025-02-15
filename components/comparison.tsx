@@ -1,79 +1,104 @@
-import { Check, Shield, ShieldCheck, X, XCircle } from "lucide-react"
-import Image from "next/image"
-import { DotPattern } from "@/components/magicui/dot-pattern"
-import { cn } from "@/lib/utils"
+"use client"
 
-export default function ComparisonSection() {
+import { useState } from "react"
+import { motion, AnimatePresence } from "framer-motion"
+import { XCircle, CheckCircle } from "lucide-react"
+import { CardDemo } from "./ui/ai"
+
+const ComparisonToggle = () => {
+  const [isAIEnabled, setIsAIEnabled] = useState(false)
+
+  const traditionalPoints = [
+    "Lead Contact Delay. Slower the contact, the smaller the conversion rate.",
+    "Clients can answer the phone OR make the calls. You suffer because of it.",
+    "SDR or Appointment Setter Costs are high and unpredictable.",
+    "Paying commissions per booked call strains budgets.",
+  ]
+
+  const futureFlowPoints = [
+    "Calls ALL Leads In Under 5 Minutes Of Completing A Form.",
+    "Instant Expert Knowledge.",
+    "0 Hiring, Training, or Managing Needed.",
+    "Never Misses A Lead or Forgets To Call.",
+  ]
+
+  const containerVariants = {
+    hidden: { opacity: 0 },
+    visible: {
+      opacity: 1,
+      transition: {
+        duration: 0.5,
+        staggerChildren: 0.1,
+      },
+    },
+  }
+
+  const itemVariants = {
+    hidden: { opacity: 0, y: 20 },
+    visible: {
+      opacity: 1,
+      y: 0,
+      transition: { duration: 0.3 },
+    },
+  }
+
   return (
-    <div className="w-full relative px-4 py-16">
-      <DotPattern
-        className={cn(
-          "absolute  -top-24 opacity-40 [mask-image:radial-gradient(200px_circle_at_center,white,transparent)]",
-        )}
-      />
-      <div className="container  mx-auto max-w-6xl">
-      
-        {/* Header Pill */}
-        <div className="mx-auto mb-4 w-fit rounded-full bg-green-100 px-8 py-2">
-          <p className="text-center text-lg font-medium text-green-600">Why Use The FutureFlow System</p>
+    <div className="min-h-screen bg-gradient-to-r from-[#003B20] to-black   text-white py-20 px-4 sm:px-6 lg:px-8">
+      <div className="max-w-7xl mx-auto">
+        <h1 className="text-4xl sm:text-5xl font-bold text-center mb-12">Lead Nurturing  <span className="text-[#00FF9D]">Comparison</span></h1>
+
+        <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-12">
+          <span className={`text-xl sm:text-2xl ${!isAIEnabled ? "font-bold text-white" : "text-gray-400"}`}>
+            Traditional
+          </span>
+          <button
+            onClick={() => setIsAIEnabled(!isAIEnabled)}
+            className="w-20 h-10 bg-gray-700 rounded-full p-1 duration-300 ease-in-out"
+          >
+            <motion.div
+              className="w-8 h-8 bg-white rounded-full shadow-md"
+              animate={{
+                x: isAIEnabled ? "100%" : "0%",
+              }}
+            />
+          </button>
+          <span className={`text-xl sm:text-2xl ${isAIEnabled ? "font-bold text-white" : "text-gray-400"}`}>
+            AI Growth System
+          </span>
         </div>
 
-        {/* Main Headline */}
-        <h1 className="mb-28 text-center text-2xl font-bold leading-tight text-white md:text-4xl lg:mx-auto lg:max-w-4xl">
-          Offload repetitive tasks to AI Agents. Cut down wait times and solve problems fast.
-        </h1>
-
-        {/* Comparison Grid */}
-        <div className="grid gap-20  md:grid-cols-2">
-          {/* Traditional System */}
-
-          <div className="rounded-3xl relative bg-white p-8 shadow-lg">
-          <div className="overflow-hidden absolute -top-5  right-1/2 left-1/2 -translate-y-1/2 -translate-x-1/2 rounded-md shadow-2xl w-24 bg-white  p-2">
-                <img
-                  src="/cons.webp"
-                  alt="FutureFlow AI"
-                  width={1000}
-                  height={1000}
-                  className="h-full w-full object-contain"
-                />
-              </div>
-           
-             
-              <h2 className="text-3xl my-10 text-center font-semibold text-gray-700">Traditional Appointment Setting</h2>
-            
-            <div className="space-y-4">
-              {traditionalPoints.map((point, index) => (
-                <div key={index} className="flex gap-3">
-                  <XCircle className="h-6 w-6 shrink-0 text-red-500" />
-                  <p className="text-gray-600">{point}</p>
-                </div>
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+          <AnimatePresence mode="wait">
+            <motion.div
+              key={isAIEnabled ? "ai" : "traditional"}
+              initial="hidden"
+              animate="visible"
+              exit="hidden"
+              variants={containerVariants}
+              className="space-y-6"
+            >
+              <h2 className="text-3xl font-bold mb-6 text-center">
+                {isAIEnabled ? "AI Growth System" : "Traditional"}
+              </h2>
+              {(isAIEnabled ? futureFlowPoints : traditionalPoints).map((point, index) => (
+                <motion.div
+                  key={index}
+                  variants={itemVariants}
+                  className="flex items-start gap-3 bg-gray-800 bg-opacity-50 p-4 rounded-lg"
+                >
+                  {isAIEnabled ? (
+                    <CheckCircle className="w-6 h-6 text-green-400 flex-shrink-0 mt-1" />
+                  ) : (
+                    <XCircle className="w-6 h-6 text-red-400 flex-shrink-0 mt-1" />
+                  )}
+                  <p className="text-lg">{point}</p>
+                </motion.div>
               ))}
-            </div>
-          </div>
+            </motion.div>
+          </AnimatePresence>
 
-          {/* FutureFlow System */}
-          <div className="rounded-3xl relative border bg-transparent p-8 text-white shadow-lg">
-          <div className="overflow-hidden absolute -top-5  right-1/2 left-1/2 -translate-y-1/2 -translate-x-1/2 rounded-md shadow-2xl w-24 bg-white  p-2">
-                <img
-                  src="/logo.png"
-                  alt="FutureFlow AI"
-                  width={80}
-                  height={80}
-                  className="h-16 w-full object-contain"
-                />
-              </div>
-           
-             
-              <h2 className="text-3xl my-10 text-center font-semibold">Next Gen AI Enabled FutureFlow</h2>
-            
-            <div className="space-y-4">
-              {futureFlowPoints.map((point, index) => (
-                <div key={index} className="flex gap-3">
-                  <ShieldCheck className="h-6 w-6 shrink-0 text-white" />
-                  <p>{point}</p>
-                </div>
-              ))}
-            </div>
+          <div>
+            <CardDemo/>
           </div>
         </div>
       </div>
@@ -81,26 +106,5 @@ export default function ComparisonSection() {
   )
 }
 
-const traditionalPoints = [
-  "Lead Contact Delay. Slower the contact, the smaller the conversion rate.",
-  "Clients can answer the phone OR make the calls. You suffer because of it.",
-  "SDR or Appointment Setter Costs are high and unpredictable.",
-  "Paying commissions per booked call strains budgets.",
-  "Hiring, training, and managing a team of callers is time-consuming.",
-  "Lack of knowledge about services leads to poor quality calls.",
-  "Unable to handle high lead volumes efficiently.",
-  "Call quality control becomes difficult as you scale.",
-]
-
-const futureFlowPoints = [
-  "Calls ALL Leads In Under 5 Minutes Of Completing A Form.",
-  "Instant Expert Knowledge.",
-  "0 Hiring, Training, or Managing Needed.",
-  "Never Misses A Lead or Forgets To Call.",
-  "Never Misses An Inbound Call.",
-  "Never Misses A Follow Up Call.",
-  "Integrates seamlessly with CRM's.",
-  "0 Staff Costs or Monthly Wages.",
-  "0 Commission Paid Out.",
-]
+export default ComparisonToggle
 
