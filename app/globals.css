@@ -3,6 +3,10 @@
 @tailwind utilities;
 
 
+body {
+  font-family: var(--font-dm-sans);
+}
+
 @layer base {
   :root {
     --background: 0 0% 100%;

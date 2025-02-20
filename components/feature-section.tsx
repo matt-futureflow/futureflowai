@@ -33,7 +33,7 @@ export function FeaturesSection() {
   return (
     <div className="bg-gradient-to-r from-[#003B20] to-black  ">
         <h2 className="text-3xl sm:text-5xl text-white font-semibold leading-tight
-        text-center py-10 md:py-20">How Does This <span className="text-[#00FF9D]">Work</span></h2>
+        text-center py-10 ">How Does This <span className="text-[#00FF9D]">Work</span></h2>
         <div className="grid  md:grid-cols-2 lg:grid-cols-4 relative z-10 pb-10 max-w-7xl mx-auto">
       {features.map((feature, index) => (
         <Feature key={feature.title} {...feature} index={index} />

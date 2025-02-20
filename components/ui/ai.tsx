@@ -74,7 +74,7 @@ const Skeleton = () => {
     <div className="p-8 overflow-hidden h-full relative flex items-center justify-center">
       <div className="flex flex-row flex-shrink-0 justify-center items-center gap-2">
         <Container className="h-8 w-8 circle-1">
-          <ClaudeLogo className="h-6 w-6 " />
+            <img src="/logo.png" className="h-full w-full" alt="" />
         </Container>
         <Container className="h-12 w-12 circle-2">
           <GoCopilot className="h-8 w-8 text-white" />

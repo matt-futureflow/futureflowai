@@ -11,7 +11,7 @@ export default {
   	extend: {
   		fontFamily: {
   			poppins: [
-  				'var(--font-poppins)'
+  				'var(--font-gorditas)'
   			]
   		},
   		colors: {

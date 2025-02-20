@@ -9,17 +9,17 @@ const ComparisonToggle = () => {
   const [isAIEnabled, setIsAIEnabled] = useState(false)
 
   const traditionalPoints = [
-    "Lead Contact Delay. Slower the contact, the smaller the conversion rate.",
-    "Clients can answer the phone OR make the calls. You suffer because of it.",
-    "SDR or Appointment Setter Costs are high and unpredictable.",
-    "Paying commissions per booked call strains budgets.",
+    "Slow Follow-Up: Leads go cold, sales vanish.",
+    "Human Errors: Missed calls and poor follow-ups.",
+    "High Costs: Staff, commissions, and inefficiency.",
+    "Lost Leads: Opportunities slip through the cracks.",
   ]
 
   const futureFlowPoints = [
-    "Calls ALL Leads In Under 5 Minutes Of Completing A Form.",
-    "Instant Expert Knowledge.",
-    "0 Hiring, Training, or Managing Needed.",
-    "Never Misses A Lead or Forgets To Call.",
+    "Save $36,000+ Per Year: Eliminate the need for costly SDRs, training, and management.",
+    "Scale Without Limits: Handle 10x more leads without additional overhead or resources.",
+    "24/7 Lead Engagement: Never miss a lead—even outside business hours",
+    "Convert Leads 3x Faster: Leads contacted within 2 minutes - GUARANTEED",
   ]
 
   const containerVariants = {
@@ -49,11 +49,12 @@ const ComparisonToggle = () => {
 
         <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-12">
           <span className={`text-xl sm:text-2xl ${!isAIEnabled ? "font-bold text-white" : "text-gray-400"}`}>
-            Traditional
+            Traditional System
           </span>
-          <button
+          <motion.button
             onClick={() => setIsAIEnabled(!isAIEnabled)}
-            className="w-20 h-10 bg-gray-700 rounded-full p-1 duration-300 ease-in-out"
+            className= {`w-20 h-10  rounded-full p-1 duration-300 ease-in-out ${isAIEnabled ? "bg-green-500" : "bg-gray-700"}`}
+           
           >
             <motion.div
               className="w-8 h-8 bg-white rounded-full shadow-md"
@@ -61,7 +62,7 @@ const ComparisonToggle = () => {
                 x: isAIEnabled ? "100%" : "0%",
               }}
             />
-          </button>
+          </motion.button>
           <span className={`text-xl sm:text-2xl ${isAIEnabled ? "font-bold text-white" : "text-gray-400"}`}>
             AI Growth System
           </span>

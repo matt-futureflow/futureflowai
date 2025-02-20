@@ -1,17 +1,16 @@
 import type { Metadata } from "next";
-import { Inter } from 'next/font/google'
-
-import { Poppins } from 'next/font/google'
+import {DM_Sans, Poppins,Manrope,Roboto,Gothic_A1}  from 'next/font/google'
 
 import "./globals.css";
 import {ReactLenis} from "@/lib/lenis";
 
 
-const poppins = Poppins({
+
+
+const dm_sans = DM_Sans({
   subsets: ['latin'],
-  weight: ['100', '200', '300', '400', '500', '600', '700', '800', '900'],
-  variable: '--font-poppins',
-  display: 'swap',
+  weight: ['400', '500', '700'],
+  variable: '--font-dm-sans',
 })
 
 
@@ -29,7 +28,7 @@ export default function RootLayout({
     <html lang="en">
       <ReactLenis root>
       <body
-        className={`${poppins.variable}  antialiased`}
+        className={`${dm_sans.variable}  antialiased`}
       >
         {children}
       </body>
