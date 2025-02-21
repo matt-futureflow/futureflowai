@@ -13,8 +13,8 @@ export default function HeroSection() {
           "absolute inset-0 opacity-40 [mask-image:radial-gradient(800px_circle_at_center,white,transparent)]",
         )}
       />
-      <div className=" text-center px-4  ">
-              <h2 className=" text-4xl text-white font-bold tracking-tighter md:text-5xl lg:text-7xl">For SMBs and 
+      <div className=" text-center px-4 pt-16 ">
+              <h2 className=" text-4xl text-white font-bold tracking-wide md:text-6xl ">For {" "}<LineShadowText className="italic text-[#00FF9D]" shadowColor={"white"}>SMBs </LineShadowText>{" "}  and 
               {" "}<LineShadowText className="italic text-[#00FF9D]" shadowColor={"white"}>
               Agencies
       </LineShadowText>

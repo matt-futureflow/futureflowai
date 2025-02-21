@@ -11,8 +11,12 @@ const caseStudies = [
     content: (
       <>
         <p className="font-semibold text-lg">$182,000 Generated!</p>
-        <p>We had the privilege of partnering with a reputable aftermarket rims and big tyres company. We implemented our Lead Converter Workflow to manage their Facebook Ad leads and also implemented an AI Re-Activation Campaign and the outcomes were incredible!</p>
-        <h3 className="font-bold">Results after FutureFlow A.I.:</h3>
+        <p className="text-lg">We had the privilege of partnering with a reputable aftermarket rims and big tyres company. We implemented our <span className="text-[#003B20] font-semibold">Lead Converter Workflow</span> to manage their Facebook Ad leads and also implemented an AI Re-Activation Campaign and the outcomes were incredible!</p>
+      </>
+    ),
+    footer : (
+      <>
+        <h3 className="font-bold text-lg">Results after FutureFlow A.I :</h3>
         <ul className="list-none space-y-2 mt-4">
           <li>✓ Additional $182,000 achieved in the 60 days!</li>
           <li>✓ Completely automated their Facebook Ad Lead Flow Process</li>
@@ -27,11 +31,16 @@ const caseStudies = [
     content: (
       <>
         <p className="font-semibold text-lg">$3,000,000+  Generated!</p>
-        <p>Get Exclusive Outbound Callers That Can Generate You Leads Like This!</p>
-        <h3 className="font-bold">Results after FutureFlow A.I.:</h3>
+        <p className="text-lg">Get Exclusive Outbound Callers That Can Generate You Leads Like This!</p>
+
+      </>
+    ),
+    footer: (
+      <>
+        <h3 className="font-bold text-lg">Results after FutureFlow A.I :</h3>
         <ul className="list-none space-y-2 mt-4">
-          <li>✓ +124% Increase in Deal Flow</li>
-          <li>✓ $3,000,000+ worth of deals generated in 1 DAY!</li>
+          <li  className=" text-sm">✓ +124% Increase in Deal Flow</li>
+          <li className=" text-sm">✓ $3,000,000+ worth of deals generated in 1 DAY! through FutureFlow AI System </li>
         </ul>
       </>
     ),
@@ -42,10 +51,15 @@ const caseStudies = [
     title: "Case Study: 48% 'Opt-In No Book' Lead Conversion",
     content: (
       <>
-       <p></p>
-        <p>We partnered with one of RockBox's franchisees and implemented our Lead Converter Workflow to increase the number of appointments from 'No Book' leads on their Facebook Ads. We doubled their previous conversion rate due to the speed and persistence of our AI Assistants.
+        <p className="text-lg">We partnered with one of RockBox's
+           franchisees and implemented our  <span className="text-[#003B20] font-semibold">Lead Converter Workflow</span> to increase 
+           the number of appointments from 'No Book' leads on their Facebook Ads. We doubled their previous conversion rate due to the speed and persistence of our AI Assistants.
         </p>
-        <h3 className="font-bold">Results after FutureFlow A.I.:</h3>
+      </>
+    ),
+    footer: (
+      <>
+        <h3 className="font-bold text-lg">Results after FutureFlow A.I :</h3>
         <ul className="list-none space-y-2 mt-4">
           <li>✓ With an LTV of $900, we generated an additional $14,400</li>
           <li>✓ Generated an additional $9,000 in opportunities</li>
@@ -75,6 +89,7 @@ export default function CaseStudies() {
               logo={study.logo}
               title={study.title}
               content={study.content}
+              footer={study.footer}
             //   onClick={() => setSelectedStudy(index)}
             />
           ))}
