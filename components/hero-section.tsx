@@ -3,6 +3,7 @@ import { DotPattern } from "@/components/magicui/dot-pattern"
 import { cn } from "@/lib/utils"
 import Link from "next/link"
 import { ShimmerButton } from "./magicui/shimmer-button"
+import { LineShadowText } from "./magicui/line-shadow-text"
 
 export default function HeroSection() {
   return (
@@ -13,7 +14,12 @@ export default function HeroSection() {
         )}
       />
       <div className=" text-center px-4  ">
-              <p className=" bg-gradient-to-r from-green-200 to-black bg-clip-text py-3 text-transparent text-3xl sm:text-5xl font-bold">For SMBs and Agencies...</p>
+              <h2 className=" text-4xl text-white font-bold tracking-tighter md:text-5xl lg:text-7xl">For SMBs and 
+              {" "}<LineShadowText className="italic text-[#00FF9D]" shadowColor={"white"}>
+              Agencies
+      </LineShadowText>
+
+              </h2>
             </div>
       <div className="max-w-7xl mx-auto px-4 pt-12 lg:pt-24 pb-16 lg:pb-32">
         <div className="grid lg:grid-cols-2 gap-12 items-center">

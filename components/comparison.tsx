@@ -3,7 +3,7 @@
 import { useState } from "react"
 import { motion, AnimatePresence } from "framer-motion"
 import { XCircle, CheckCircle } from "lucide-react"
-import { CardDemo } from "./ui/ai"
+import { CardDemo } from "@/components/ui/ai"
 
 const ComparisonToggle = () => {
   const [isAIEnabled, setIsAIEnabled] = useState(false)
@@ -43,9 +43,11 @@ const ComparisonToggle = () => {
   }
 
   return (
-    <div className="min-h-screen bg-gradient-to-r from-[#003B20] to-black   text-white py-20 px-4 sm:px-6 lg:px-8">
+    <div className="min-h-screen bg-gradient-to-r from-[#003B20] to-black text-white py-10 px-4 sm:px-6 lg:px-8">
       <div className="max-w-7xl mx-auto">
-        <h1 className="text-4xl sm:text-5xl font-bold text-center mb-12">Lead Nurturing  <span className="text-[#00FF9D]">Comparison</span></h1>
+        <h1 className="text-4xl sm:text-5xl font-bold text-center mb-12">
+          Lead Nurturing <span className="text-[#00FF9D]">Comparison</span>
+        </h1>
 
         <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-12">
           <span className={`text-xl sm:text-2xl ${!isAIEnabled ? "font-bold text-white" : "text-gray-400"}`}>
@@ -53,8 +55,7 @@ const ComparisonToggle = () => {
           </span>
           <motion.button
             onClick={() => setIsAIEnabled(!isAIEnabled)}
-            className= {`w-20 h-10  rounded-full p-1 duration-300 ease-in-out ${isAIEnabled ? "bg-green-500" : "bg-gray-700"}`}
-           
+            className={`w-20 h-10 rounded-full p-1 duration-300 ease-in-out ${isAIEnabled ? "bg-green-500" : "bg-gray-700"}`}
           >
             <motion.div
               className="w-8 h-8 bg-white rounded-full shadow-md"
@@ -68,7 +69,7 @@ const ComparisonToggle = () => {
           </span>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
           <AnimatePresence mode="wait">
             <motion.div
               key={isAIEnabled ? "ai" : "traditional"}
@@ -79,7 +80,7 @@ const ComparisonToggle = () => {
               className="space-y-6"
             >
               <h2 className="text-3xl font-bold mb-6 text-center">
-                {isAIEnabled ? "AI Growth System" : "Traditional"}
+                {isAIEnabled ? "AI Growth System" : "Traditional System"}
               </h2>
               {(isAIEnabled ? futureFlowPoints : traditionalPoints).map((point, index) => (
                 <motion.div
@@ -98,8 +99,8 @@ const ComparisonToggle = () => {
             </motion.div>
           </AnimatePresence>
 
-          <div>
-            <CardDemo/>
+          <div className="flex items-center justify-center">
+            <CardDemo  />
           </div>
         </div>
       </div>

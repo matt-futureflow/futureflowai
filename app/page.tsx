@@ -4,6 +4,7 @@ import { FeaturesSection } from "@/components/feature-section";
 import AiAssistant from "@/components/ai-assitant";
 import FAQ from "@/components/faq";
 import ComparisonToggle from "@/components/comparison";
+import CaseStudies from "@/components/case-studies";
 
 export default function Home() {
   return (
@@ -12,6 +13,7 @@ export default function Home() {
        <FeaturesSection/>
        <ComparisonToggle/>
        <AiAssistant/>
+       <CaseStudies/>
        <FAQ/>
      </div>
   );

@@ -10,9 +10,7 @@ export function CardDemo() {
       <CardSkeletonContainer>
         <Skeleton />
       </CardSkeletonContainer>
-      <CardTitle>
-        FutureFlow Ai
-      </CardTitle>
+      <CardTitle>AI Agent Workflow</CardTitle>
     </Card>
   );
 }
@@ -71,22 +69,38 @@ const Skeleton = () => {
     });
   }, []);
   return (
-    <div className="p-8 overflow-hidden h-full relative flex items-center justify-center">
+    <div className="p-2 overflow-hidden h-full relative flex items-center justify-center">
       <div className="flex flex-row flex-shrink-0 justify-center items-center gap-2">
-        <Container className="h-8 w-8 circle-1">
-            <img src="/logo.png" className="h-full w-full" alt="" />
+        <Container className="h-16 w-16 md:h-20 md:w-20 circle-1">
+          <img
+            src="/n8n.webp"
+            className="h-12 w-12 md:h-16 md:w-16"
+            alt="n8n"
+          />
         </Container>
-        <Container className="h-12 w-12 circle-2">
-          <GoCopilot className="h-8 w-8 text-white" />
+        <Container className="h-16 w-16 md:h-[6rem] md:w-[6rem] circle-2">
+          <img
+            src="/make.svg"
+            className="h-12 w-12 md:h-[4.5rem] md:w-[4.5rem]"
+            alt="make"
+          />
         </Container>
-        <Container className=" h-16 w-16 circle-3">
-          <OpenAILogo className="h-12 w-12 text-white" />
+        <Container className="h-20 w-20 md:h-24 md:w-24 lg:h-32 lg:w-32 circle-3">
+          <OpenAILogo className="h-12 w-12 md:h-[4rem] md:w-[4rem] lg:h-[6rem] lg:w-[6rem]" />
         </Container>
-        <Container className="h-12 w-12 circle-4">
-          <MetaIconOutline className="h-8 w-8 " />
+        <Container className="h-16 w-16 md:h-[6rem] md:w-[6rem] circle-4">
+          <img
+            src="/ghl.png"
+            className="h-12 w-12 md:h-[4.5rem] md:w-[4.5rem]"
+            alt="ghl"
+          />
         </Container>
-        <Container className="h-8 w-8 circle-5">
-          <GeminiLogo className="h-6 w-6 " />
+        <Container className="h-16 w-16 md:h-20 md:w-20 circle-5">
+          <img
+            src="/retell-ai.png"
+            className="h-12 w-12 md:h-16 md:w-16"
+            alt="retell-ai"
+          />
         </Container>
       </div>
 
@@ -144,7 +158,7 @@ export const Card = ({
   return (
     <div
       className={cn(
-        "max-w-sm w-full mx-auto p-8 rounded-xl    group",
+        "max-w-sm md:max-w-2xl w-full mx-auto p-8 rounded-xl  group",
         className
       )}
     >
@@ -181,10 +195,7 @@ export const CardDescription = ({
 }) => {
   return (
     <p
-      className={cn(
-        "text-sm font-normal text-neutral-400 max-w-sm",
-        className
-      )}
+      className={cn("text-sm font-normal text-neutral-400 max-w-sm", className)}
     >
       {children}
     </p>
@@ -224,7 +235,7 @@ const Container = ({
   return (
     <div
       className={cn(
-        `h-16 w-16 rounded-full flex items-center justify-center bg-[rgba(248,248,248,0.01)]
+        `h-24 w-24 rounded-full flex items-center justify-center bg-[rgba(248,248,248,0.01)]
     shadow-[0px_0px_8px_0px_rgba(248,248,248,0.25)_inset,0px_32px_24px_-16px_rgba(0,0,0,0.40)]
     `,
         className

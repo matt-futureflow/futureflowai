@@ -35,7 +35,7 @@ const FAQ = () => {
   return ( 
     <main className='bg-gradient-to-r from-[#003B20] to-black '>
         <div className="w-full max-w-3xl  mx-auto p-6 space-y-4">
-      <h2 className="text-4xl text-white font-bold text-center mb-12">Frequently Asked Questions</h2>
+      <h2 className="text-4xl md:text-5xl text-white font-bold text-center mb-12">Frequently Asked  <span className='text-[#00FF9D]'>Questions</span></h2>
       <div className="space-y-4">
         {faqs.map((faq, index) => (
           <div

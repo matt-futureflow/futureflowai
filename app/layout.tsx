@@ -1,10 +1,15 @@
 import type { Metadata } from "next";
-import {DM_Sans, Poppins,Manrope,Roboto,Gothic_A1}  from 'next/font/google'
+import {DM_Sans,Inter}  from 'next/font/google'
 
 import "./globals.css";
 import {ReactLenis} from "@/lib/lenis";
 
 
+const inter = Inter({
+  subsets: ['latin'],
+  weight: ['400', '500', '700'],
+  variable: '--font-inter',
+})
 
 
 const dm_sans = DM_Sans({
@@ -28,7 +33,7 @@ export default function RootLayout({
     <html lang="en">
       <ReactLenis root>
       <body
-        className={`${dm_sans.variable}  antialiased`}
+        className={`${inter.variable}  antialiased`}
       >
         {children}
       </body>
