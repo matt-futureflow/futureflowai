@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import {DM_Sans,Inter}  from 'next/font/google'
+import {DM_Sans,Inter ,Mona_Sans}  from 'next/font/google'
 
 import "./globals.css";
 import {ReactLenis} from "@/lib/lenis";
@@ -11,6 +11,11 @@ const inter = Inter({
   variable: '--font-inter',
 })
 
+const mona_sans = Mona_Sans({
+  subsets: ['latin'],
+  weight: ['400', '500', '700'],
+  variable: '--font-mona-sans',
+})
 
 const dm_sans = DM_Sans({
   subsets: ['latin'],
@@ -33,7 +38,7 @@ export default function RootLayout({
     <html lang="en">
       <ReactLenis root>
       <body
-        className={`${inter.variable}  antialiased`}
+        className={`${dm_sans.variable}  antialiased`}
       >
         {children}
       </body>
