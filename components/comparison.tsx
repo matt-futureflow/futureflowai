@@ -18,10 +18,10 @@ export default function ComparisonPage() {
             <h2 className="text-3xl text-center font-bold mb-8">Traditional System</h2>
 
             {[
-              { title: "Slow Follow-Up", text: "Leads go cold, sales vanish." },
-              { title: "Human Errors", text: "Missed calls and poor follow-ups." },
-              { title: "High Costs", text: "Staff, commissions, and inefficiency." },
-              { title: "Lost Leads", text: "Opportunities slip through the cracks." },
+              { title: "Slow Follow-Up", text: "Delayed responses cause leads to go cold, resulting in lost revenue." },
+              { title: "Human Errors", text: "Missed calls, inconsistent follow-ups, and mistakes lead to poor conversion rates." },
+              { title: "High Costs", text: "Hiring staff, paying commissions, and inefficiencies make scaling expensive and difficult." },
+              { title: "Lost Leads", text: "Without structured follow-ups, potential customers slip away, wasting marketing efforts." },
             ].map((item, index) => (
               <div key={index} className="flex items-start gap-3 bg-gray-900/50 p-4 rounded-lg">
                 <XCircle className="w-6 h-6 text-red-400 flex-shrink-0 mt-1" />
@@ -39,19 +39,19 @@ export default function ComparisonPage() {
             {[
               {
                 title: "Save $36,000+ Per Year",
-                text: "Eliminate the need for costly SDRs, training, and management.",
+                text: "Remove the need for costly SDRs, management, and ongoing training expenses.",
               },
               {
                 title: "Scale Without Limits",
-                text: "Handle 10x more leads without additional overhead or resources.",
+                text: "Manage 10x more leads efficiently without additional staff, overhead, or manual effort.",
               },
               {
                 title: "24/7 Lead Engagement",
-                text: "Never miss a lead—even outside business hours",
+                text: "Never miss a lead again—even outside regular business hours or holidays.",
               },
               {
                 title: "Convert Leads 3x Faster",
-                text: "Leads contacted within 2 minutes - GUARANTEED",
+                text: "Engage every lead within two minutes, ensuring maximum conversion opportunities.",
               },
             ].map((item, index) => (
               <div key={index} className="flex items-start gap-3 bg-[#003B20]/50 p-4 rounded-lg">
