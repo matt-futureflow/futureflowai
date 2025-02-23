@@ -1,5 +1,7 @@
 "use client"
+import Link from "next/link"
 import { CaseStudyCard } from "./ui/case-study-card"
+import { ShimmerButton } from "./magicui/shimmer-button"
 
 const caseStudies = [
   {
@@ -54,6 +56,16 @@ export default function CaseStudies() {
           ))}
         </div>
       </div>
+      <div className="pt-10 flex justify-center items-center">
+              
+              <Link
+                href="https://api.leadconnectorhq.com/widget/bookings/futureflow/introductioncall"
+              >
+                <ShimmerButton >
+                  Schedule A Call
+                </ShimmerButton>
+              </Link>
+            </div>
     </section>
   )
 }

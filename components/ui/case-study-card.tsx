@@ -16,7 +16,7 @@ interface CaseStudyCardProps {
 
 export function CaseStudyCard({ logo, title, amount, content, results }: CaseStudyCardProps) {
   return (
-    <motion.div whileHover={{ scale: 1.02 }} transition={{ duration: 0.2 }}>
+    <div >
       <Card className="bg-white h-full flex flex-col">
         <CardContent className="p-8 flex-1 space-y-6">
           <div className="h-24 relative mb-6">
@@ -42,7 +42,7 @@ export function CaseStudyCard({ logo, title, amount, content, results }: CaseStu
           </div>
         </CardFooter>
       </Card>
-    </motion.div>
+    </div>
   )
 }
 
