@@ -1,21 +1,8 @@
 import type { Metadata } from "next";
-import {DM_Sans,Inter ,Mona_Sans}  from 'next/font/google'
+import {DM_Sans}  from 'next/font/google'
 
 import "./globals.css";
 import {ReactLenis} from "@/lib/lenis";
-
-
-const inter = Inter({
-  subsets: ['latin'],
-  weight: ['400', '500', '700'],
-  variable: '--font-inter',
-})
-
-const mona_sans = Mona_Sans({
-  subsets: ['latin'],
-  weight: ['400', '500', '700'],
-  variable: '--font-mona-sans',
-})
 
 const dm_sans = DM_Sans({
   subsets: ['latin'],
