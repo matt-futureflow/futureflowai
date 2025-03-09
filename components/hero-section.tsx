@@ -18,7 +18,6 @@ export default function HeroSection() {
               {" "}<LineShadowText className="italic text-[#00FF9D]" shadowColor={"white"}>
               Agencies
       </LineShadowText>
-
               </h2>
             </div>
       <div className="max-w-7xl mx-auto px-4 pt-12 lg:pt-24 pb-16 lg:pb-32">
@@ -27,8 +26,8 @@ export default function HeroSection() {
           <div className="space-y-8">
             
             <div className="space-y-4">
-              <h1 className="text-3xl md:text-4xl lg:text-5xl text-white font-semibold leading-relaxed">
-                Never Miss A Lead With Our <span className="text-[#00FF9D]">A.I. Growth System</span>
+              <h1 className="text-3xl md:text-5xl  text-white font-semibold leading-relaxed">
+                Never Waste A Lead With Our <span className="text-[#00FF9D]">A.I. Growth System</span>
               </h1>
             </div>
 

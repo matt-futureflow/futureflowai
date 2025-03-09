@@ -1,4 +1,3 @@
-import Image from "next/image";
 
 export default function Footer() {
     return (
@@ -6,7 +5,6 @@ export default function Footer() {
           <p className="text-lg text-center font-semibold text-gray-300">
             Copyright © {new Date().getFullYear()} FutureFlowAI. All rights reserved.
           </p>
-        
       </footer>
     )
   }
