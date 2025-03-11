@@ -76,8 +76,8 @@ export default function HeroSection() {
 
           {/* Right Column - Video Section */}
           <div className="relative mt-8 lg:mt-0">
-            <div className="relative rounded-lg border border-[#00FF9D]/20 bg-black/40 aspect-video overflow-hidden">
-              <video src="/video.mp4" autoPlay loop controls={true} className="rounded-lg w-full h-full object-cover" />
+            <div className="relative rounded-lg border border-[#00FF9D]/20 bg-black/40  overflow-hidden">
+            <iframe className="w-full" height="400" src="https://www.loom.com/embed/51d2415eda9c45a28975a502e6cbd236?sid=5cefd524-c015-4bd1-95df-20fd684d70f6"></iframe>
             </div>
           </div>
         </div>
