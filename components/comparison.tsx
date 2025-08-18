@@ -65,7 +65,7 @@ export default function ComparisonPage() {
         </div>
 
         <div className="flex justify-center">
-          <Link href="https://api.leadconnectorhq.com/widget/bookings/futureflow/introductioncall">
+          <Link href="https://api.leadconnectorhq.com/widget/bookings/futureflow/introduction-callsqaitp">
             <ShimmerButton>Schedule A Call</ShimmerButton>
           </Link>
         </div>

@@ -65,7 +65,7 @@ export default function HeroSection() {
             <div className="pt-4">
               
               <Link
-                href="https://api.leadconnectorhq.com/widget/bookings/futureflow/introductioncall"
+                href="https://api.leadconnectorhq.com/widget/bookings/futureflow/introduction-callsqaitp"
               >
                 <ShimmerButton >
                   Schedule A Call

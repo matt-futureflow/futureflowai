@@ -59,7 +59,7 @@ export default function CaseStudies() {
       <div className="pt-10 flex justify-center items-center">
               
               <Link
-                href="https://api.leadconnectorhq.com/widget/bookings/futureflow/introductioncall"
+                href="https://api.leadconnectorhq.com/widget/bookings/futureflow/introduction-callsqaitp"
               >
                 <ShimmerButton >
                   Schedule A Call
