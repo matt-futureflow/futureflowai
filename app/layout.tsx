@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import {DM_Sans}  from 'next/font/google'
 
 import "./globals.css";
-import {ReactLenis} from "@/lib/lenis";
+
 
 const dm_sans = DM_Sans({
   subsets: ['latin'],
@@ -23,13 +23,13 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <ReactLenis root>
+      
       <body
         className={`${dm_sans.variable}  antialiased`}
       >
         {children}
       </body>
-      </ReactLenis>
+      
     </html>
   );
 }
