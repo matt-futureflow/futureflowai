@@ -10,7 +10,7 @@ import { TestimonialsSection } from "@/components/testimonials-section";
 
 export default function Home() {
   return (
-     <div className="  bg-gradient-to-b from-[#03120c] to-[#051f14]">
+     <div className="bg-white">
        <HeroSection/>
        {/* <FeaturesSection/> */}
        <AIGrowthSection/>

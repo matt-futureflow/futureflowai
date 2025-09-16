@@ -1,7 +1,6 @@
 "use client"
 import Link from "next/link"
 import { CaseStudyCard } from "./ui/case-study-card"
-import { ShimmerButton } from "./magicui/shimmer-button"
 
 const caseStudies = [
   {
@@ -43,27 +42,30 @@ const caseStudies = [
 
 export default function CaseStudies() {
   return (
-    <section className="w-full py-12 md:py-24 bg-gradient-to-r from-[#003B20] to-black">
-      <div className="container mx-auto px-4">
+    <section className="w-full py-12 md:py-24 bg-white relative">
+      {/* Purple gradient overlay */}
+      <div className="absolute top-20 right-0 w-80 h-80 bg-gradient-to-bl from-purple-400/10 to-purple-600/5 rounded-full blur-3xl"></div>
+      
+      <div className="container mx-auto px-4 relative z-10">
         <div className="text-center mb-12">
-          <h1 className="text-4xl md:text-5xl font-bold text-white mb-4">
-            Case <span className="text-[#00FF9D]">Studies</span>
+          <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
+            Case <span className="bg-gradient-to-r from-purple-600 to-purple-700 bg-clip-text text-transparent">Studies</span>
           </h1>
         </div>
-        <div className="grid md:grid-cols-3 gap-8 max-w-7xl mx-auto">
+        <div className="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
           {caseStudies.map((study, index) => (
             <CaseStudyCard key={index} {...study} />
           ))}
         </div>
       </div>
-      <div className="pt-10 flex justify-center items-center">
+      <div className="pt-10 flex justify-center items-center relative z-10">
               
               <Link
                 href="https://api.leadconnectorhq.com/widget/bookings/futureflow/introduction-callsqaitp"
               >
-                <ShimmerButton >
+                <button className="bg-gradient-to-r from-purple-600 to-purple-700 text-white px-8 py-4 rounded-full font-semibold text-lg hover:from-purple-700 hover:to-purple-800 transition-all shadow-lg">
                   Schedule A Call
-                </ShimmerButton>
+                </button>
               </Link>
             </div>
     </section>

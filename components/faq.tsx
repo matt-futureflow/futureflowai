@@ -33,24 +33,27 @@ const FAQ = () => {
   };
 
   return ( 
-    <main className='bg-gradient-to-r from-[#003B20] to-black '>
-        <div className="w-full max-w-3xl  mx-auto p-6 space-y-4">
-      <h2 className="text-4xl md:text-5xl text-white font-bold text-center mb-12">Frequently Asked  <span className='text-[#00FF9D]'>Questions</span></h2>
+    <main className='bg-white py-20 relative'>
+        {/* Purple gradient overlay */}
+        <div className="absolute top-0 left-1/2 transform -translate-x-1/2 w-96 h-96 bg-gradient-to-br from-purple-400/10 to-purple-600/5 rounded-full blur-3xl"></div>
+        
+        <div className="w-full max-w-4xl mx-auto p-6 space-y-4 relative z-10">
+      <h2 className="text-4xl md:text-5xl text-gray-900 font-bold text-center mb-12">Frequently Asked  <span className='bg-gradient-to-r from-purple-600 to-purple-700 bg-clip-text text-transparent'>Questions</span></h2>
       <div className="space-y-4">
         {faqs.map((faq, index) => (
           <div
             key={index}
-            className=" rounded-lg overflow-hidden border-white border bg-white/5 backdrop-blur-md  shadow-sm"
+            className="rounded-2xl overflow-hidden border border-purple-200 bg-white shadow-lg"
           >
             <button
               className="w-full px-6 py-4 text-left flex justify-between items-center 0 transition-colors"
               onClick={() => toggleFAQ(index)}
             >
-              <span className="font-medium text-white text-lg">{faq.question}</span>
+              <span className="font-semibold text-gray-900 text-lg">{faq.question}</span>
               {openIndex === index ? (
-                <ChevronUp className="w-5 h-5 text-gray-200" />
+                <ChevronUp className="w-5 h-5 text-purple-600" />
               ) : (
-                <ChevronDown className="w-5 h-5 text-gray-200" />
+                <ChevronDown className="w-5 h-5 text-purple-600" />
               )}
             </button>
             <div
@@ -58,7 +61,7 @@ const FAQ = () => {
                 openIndex === index ? 'max-h-96 py-4' : 'max-h-0'
               }`}
             >
-              <p className="text-gray-100 whitespace-pre-line">{faq.answer}</p>
+              <p className="text-gray-700 whitespace-pre-line">{faq.answer}</p>
             </div>
           </div>
         ))}

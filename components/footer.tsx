@@ -1,8 +1,8 @@
 
 export default function Footer() {
     return (
-      <footer className="w-full bg-gradient-to-r  px-4 py-6">
-          <p className="text-lg text-center font-semibold text-gray-300">
+      <footer className="w-full bg-white border-t border-purple-200 px-4 py-8">
+          <p className="text-lg text-center font-medium text-gray-600">
             Copyright © {new Date().getFullYear()} FutureFlowAI. All rights reserved.
           </p>
       </footer>
