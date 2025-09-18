@@ -33,7 +33,7 @@ const FAQ = () => {
   };
 
   return ( 
-    <main className='bg-white py-20 relative'>
+    <main className='bg-white pb-10 relative'>
         {/* Purple gradient overlay */}
         <div className="absolute top-0 left-1/2 transform -translate-x-1/2 w-96 h-96 bg-gradient-to-br from-purple-400/10 to-purple-600/5 rounded-full blur-3xl"></div>
         
